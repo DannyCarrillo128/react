@@ -1,5 +1,7 @@
 import { createBrowserRouter, Navigate, NavLink, Outlet, RouterProvider } from 'react-router-dom';
 
+import { FormikAbstraction, FormikBasicPage, FormikComponents, FormikYupPage, RegisterPage } from '../03-forms/pages';
+
 import logo from '../logo.svg';
 
 function Root() {
@@ -10,16 +12,24 @@ function Root() {
           <img src={ logo } alt="React Logo"/>
           <ul>
             <li>
-              <NavLink to="/home"
-                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Home</NavLink>
+              <NavLink to="/register"
+                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Register Page</NavLink>
             </li>
             <li>
-              <NavLink to="/about"
-                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>About</NavLink>
+              <NavLink to="/formik-abstraction"
+                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Formik Abstraction</NavLink>
             </li>
             <li>
-              <NavLink to="/users"
-                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Users</NavLink>
+              <NavLink to="/formik-basics"
+                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Formik Basics</NavLink>
+            </li>
+            <li>
+              <NavLink to="/formik-components"
+                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Formik Components</NavLink>
+            </li>
+            <li>
+              <NavLink to="/formik-yup"
+                       className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Formik Yup</NavLink>
             </li>
           </ul>
         </nav>
@@ -34,9 +44,11 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root/>,
     children: [
-      { path: 'home', element: <h1>Home</h1> },
-      { path: 'about', element: <h1>About</h1> },
-      { path: 'users', element: <h1>Users</h1> },
+      { path: 'register', element: <RegisterPage /> },
+      { path: 'formik-abstraction', element: <FormikAbstraction /> },
+      { path: 'formik-basics', element: <FormikBasicPage /> },
+      { path: 'formik-components', element: <FormikComponents /> },
+      { path: 'formik-yup', element: <FormikYupPage /> },
       { path: '/*', element: <Navigate to="home" replace></Navigate> }
     ]
   }

@@ -15,10 +15,10 @@ export const FormikYupPage = () => {
     validationSchema: Yup.object({
       firstname: Yup.string()
                             .required('Mandatory field.')
-                            .max(15, 'Firstname must have less than 15 characters.'),
+                            .max(15, 'Firstname must be less than 15 characters.'),
       lastname: Yup.string()
                             .required('Mandatory field.')
-                            .max(10, 'Lastname must have less than 10 characters.'),
+                            .max(10, 'Lastname must be less than 10 characters.'),
       email: Yup.string()
                          .required('Mandatory field.')
                          .email('Invalid email address.')

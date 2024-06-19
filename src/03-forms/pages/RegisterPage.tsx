@@ -46,7 +46,7 @@ export const RegisterPage = () => {
           value={ password }
           onChange={ onChange } />
         { password.trim().length <= 0 && <span>Mandatory field.</span> }
-        { password.trim().length < 6 && password.trim().length > 0 && <span>Password must have at least 6 characters.</span> }
+        { password.trim().length < 6 && password.trim().length > 0 && <span>Password must be at least 6 characters.</span> }
         <input
           type="password"
           name="password2"

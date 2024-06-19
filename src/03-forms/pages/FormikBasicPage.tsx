@@ -16,13 +16,13 @@ export const FormikBasicPage = () => {
     if (!values.firstname) {
       errors.firstname = 'Mandatory field.'
     } else if (values.firstname.length > 15) {
-      errors.firstname = 'Firstname must have less than 15 characters.';
+      errors.firstname = 'Firstname must be less than 15 characters.';
     }
 
     if (!values.lastname) {
       errors.lastname = 'Mandatory field.'
     } else if (values.lastname.length > 10) {
-      errors.lastname = 'Lastname must have less than 10 characters.';
+      errors.lastname = 'Lastname must be less than 10 characters.';
     }
 
     if (!values.email) {

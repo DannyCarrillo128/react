@@ -1,0 +1,48 @@
+[
+  {
+    "type": "input",
+    "name": "firstname",
+    "placeholder": "",
+    "label": "Firstname",
+    "value": "",
+    "validations": [
+      { "type": "required" },
+      { "type": "minLength", "value": 5 }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastname",
+    "placeholder": "",
+    "label": "Lastname",
+    "value": "",
+    "validations": [
+      { "type": "required" }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      { "type": "required" },
+      { "type": "email" }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite game",
+    "value": "",
+    "options": [
+      { "id": 1, "label": "Super Smash Bros." },
+      { "id": 2, "label": "Marvel vs Capcom" },
+      { "id": 3, "label": "Okami" }
+    ],
+    "validations": [
+      { "type": "required" }
+    ]
+  }
+]
